@@ -24,6 +24,13 @@ body {
   background-color: #1090cb;
 }
 
+main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -32,17 +39,189 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 40%;
   position: absolute;
-  top: 14.875em;
-  left: 5.6875em;
-  font-size: 2.5em;
-  margin: 0;
-  padding: 0;
+  width: 40%;
+  top: 5em;
+  left: 3.5em;
+  font-size: 2em;
 }
 
-#logo {
-  width: 10%;
-  height: 10%;
+#header h2 {
+  font-weight: 600;
+  color: #ffff;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+}
+
+#header span {
+  color: #02006b;
+}
+
+#slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 28em;
+  left: 7em;
+}
+
+#slogan h3 {
+  color: #ffff;
+  -webkit-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+  font-weight: 400;
+}
+
+/*to edit the size of the png, you must first edi the size of the container
+then, edit image size to fit the container 100%*/
+.logo {
+  width: 7em;
+  position: absolute;
+  top: 36em;
+  left: 6em;
+  opacity: 1;
+  border-radius: 10px;
+  -webkit-transition: visibility opacity 1s ease-out;
+  transition: visibility opacity 1s ease-out;
+}
+
+.logo #png {
+  width: 100%;
+}
+
+.image-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 55em;
+  left: 40%;
+  -webkit-transition: opacity 1.2s ease-out;
+  transition: opacity 1.2s ease-out;
+  z-index: 1;
+}
+
+.image-1 img {
+  width: 100%;
+}
+
+.image-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0em;
+  overflow: hidden;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 1262px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #header {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 1;
+  }
+  #slogan {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    opacity: 0.6;
+    z-index: -1;
+  }
+  .image-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: -2;
+    opacity: 0.6;
+  }
+}
+
+@media only screen and (max-width: 1136px) {
+  .logo {
+    display: none;
+    visibility: 0;
+    opacity: 0;
+  }
+  .image-1 {
+    opacity: 0.1;
+  }
+  .image-2 {
+    opacity: 0.2;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  main {
+    height: 100vh;
+  }
+  #header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    left: 0;
+  }
+  #slogan {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 30em;
+    left: 0px;
+  }
+}
+
+@media only screen and (max-width: 411px) {
+  #header {
+    top: 1em;
+  }
+  #slogan {
+    top: 30em;
+  }
+}
+
+@media only screen and (max-width: 331px) {
+  #slogan {
+    top: 37em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
